@@ -1,3 +1,8 @@
+CREAR PRIMER PROYECTO DJANGO
+
+
+
+
 FUENTES
 Manual base
 https://tutorial.djangogirls.org/es/
