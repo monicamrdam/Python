@@ -74,8 +74,6 @@ print('==============================')
 #Función para obtener los datos de los characters para cada página
 def getCharactersData(charactersData):
     listChararcters =[]
-    i=len(charactersData['results'])
-
     for i in charactersData['results']:
         char={
             'id': (i['id']),
@@ -85,10 +83,6 @@ def getCharactersData(charactersData):
 
         }
         listChararcters.append(char)
-        #print (i['name']),
-        #print(i['location']['name'])
-        #print(len(i['episode']))
-        #print(i['episode'])
     return listChararcters
 
 #print(len(getCharactersData(data)))
@@ -97,30 +91,20 @@ def getCharactersData(charactersData):
 
 #Función para obtener todas las rutas de las paginas a las que hay llamar
 #"https://rickandmortyapi.com/api/character?page=3"
-def main_requestPage(baseurl, endpoint):
+def list_all_characters_pages(baseurl, endpoint):
     #empieza la api en la pagina 1 y termina en la 42
     numeroPage=(getPages(data))+1
     pageList=[]
     for i in range(1,numeroPage):
         path = (baseurl + endpoint + '?page='+str(i))
         pageList.append(path)
-    #print (pageList)
-    return
+    return pageList
 
-main_requestPage(baseurl, endpoint)
-
-caracterlist = []
 #Función para obtener todos los characters
-def totalDate(baseurl, endpoint):
-    # empieza la api en la pagina 2 y termina en la 42
-    numeroPage = (getPages(data)) + 1
-    #for i in range(1, numeroPage): da fallo a partir de la petición de la ruta 35 por las llamadas a la API
-    for i in range(1, 10):
-        path = (baseurl + endpoint + '?page=' + str(i))
-        #print(path)
+def list_all_characters():
+    caracterlist = []
+    all_characters_pages = list_all_characters_pages(baseurl, endpoint)
+    for path in all_characters_pages:
         dataPath = main_requestPath(path)
-        #print(getCharactersData(dataPath))
-        caracterlist.append(getCharactersData(dataPath))
-    return
-
-totalDate(baseurl, endpoint)
+        caracterlist.extend(getCharactersData(dataPath))
+    return caracterlist
