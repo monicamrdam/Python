@@ -1,5 +1,3 @@
-
-
 Entorno virtual
 Definimos el nombre del entorno virtual en este caso "myenv". Puedes usar cualquier otro nombre, pero sólo utiliza minúsculas y no incluyas espacio.
 
@@ -10,15 +8,16 @@ Este código crea un directorio llamado myvenv (o cualquier nombre que hayas ele
 Ejecutamos el entorno virtual
 source myvenv/bin/activate
 
-Instalamos flask
+Instalamos dependencias
 pip install flask
 pip install requests
+pip install pandas
 
 
 
 Fuente apiREST
 https://www.youtube.com/watch?v=Esdj9wlBOaI
-ls
+https://www.youtube.com/watch?v=-oPuGc05Lxs
 
 Api
 https://rickandmortyapi.com/api
@@ -26,3 +25,13 @@ https://rickandmortyapi.com/api/character
 
 Route
 https://flask-es.readthedocs.io/quickstart/#routing
+
+Sqlite CRUD
+https://www.youtube.com/watch?v=cBnpwdJDq40&list=PLVj5uXWMQ4cx8dESi7rPJh5bBi4arXdTF
+https://www.youtube.com/watch?v=WFzRy8KVcrM
+
+Github/Gitpage
+https://pages.github.com/
+
+PythonAnywhere
+https://www.youtube.com/watch?v=v54FAicqKzU&list=PLBO4apWPK7b7K6c-jpEI0zflZYDjVp7cd&index=26
