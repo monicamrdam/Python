@@ -1,0 +1,11 @@
+#Archivo con los requerimientos de la aplicación
+# Usage: pip install -r requirements.txt
+# pip freeze
+
+# Flask Framework
+Flask
+
+# Automated tests
+pytest
+
+pandas
