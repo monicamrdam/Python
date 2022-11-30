@@ -1,4 +1,5 @@
 
+
 #https://docs.python.org/es/3.9/library/unittest.html
 import unittest
 import requests
@@ -23,16 +24,12 @@ class TestAPI(unittest.TestCase):
 
     #Test 3 verificamos que hemos obtenido todos los datos
     def test_3_getAllCharacters(self):
-        resp = requests.get(self.URL_HOME)
-        self.assertEqual(len(resp.json()), 880)
+        resp = requests.get(self.URL_CHARACTER)
+        self.assertEqual(len(resp.json()), 825)
         print("Test 3 completed")
 
 
-    #Test 4 verificamos que mostramos 20 characters de la page 1
-    def test_4_getCharactersPage(self):
-        resp = requests.get(self.URL_HOME)
-        self.assertEqual(len(resp.json()), 20)
-        print("Test 4 completed")
+
 
 
 
@@ -43,3 +40,4 @@ if __name__== "__main__":
     #Ejecutamos el primer test
     tester.test_1_Home()
     tester.test_2_CharacterS()
+    tester.test_3_getAllCharacters()
