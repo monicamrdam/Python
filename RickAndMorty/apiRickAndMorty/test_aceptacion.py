@@ -1,4 +1,5 @@
 
+
 import unittest
 import requests
 
@@ -7,98 +8,87 @@ import requests
 class TestAPI(unittest.TestCase):
     URL_CHARACTER ="http://127.0.0.1:2000/characters"
 
-    first_data={
-        "episodes": [
-            "Pilot",
-            "Lawnmower Dog",
-            "Anatomy Park",
-            "M. Night Shaym-Aliens!",
-            "Meeseeks and Destroy",
-            "Rick Potion #9",
-            "Raising Gazorpazorp",
-            "Rixty Minutes",
-            "Something Ricked This Way Comes",
-            "Close Rick-counters of the Rick Kind",
-            "Ricksy Business",
-            "A Rickle in Time",
-            "Mortynight Run",
-            "Auto Erotic Assimilation",
-            "Total Rickall",
-            "Get Schwifty",
-            "The Ricks Must Be Crazy",
-            "Big Trouble in Little Sanchez",
-            "Interdimensional Cable 2: Tempting Fate",
-            "Look Who's Purging Now",
-            "The Wedding Squanchers",
-            "The Rickshank Rickdemption",
-            "Rickmancing the Stone",
-            "Pickle Rick",
-            "Vindicators 3: The Return of Worldender",
-            "The Whirly Dirly Conspiracy",
-            "Rest and Ricklaxation",
-            "The Ricklantis Mixup",
-            "Morty's Mind Blowers",
-            "The ABC's of Beth",
-            "The Rickchurian Mortydate",
-            "Edge of Tomorty: Rick, Die, Rickpeat",
-            "The Old Man and the Seat",
-            "One Crew Over the Crewcoo's Morty",
-            "Claw and Hoarder: Special Ricktim's Morty",
-            "Rattlestar Ricklactica",
-            "Never Ricking Morty",
-            "Promortyus",
-            "The Vat of Acid Episode",
-            "Childrick of Mort",
-            "Star Mort: Rickturn of the Jerri",
-            "Mort Dinner Rick Andre",
-            "Mortyplicity",
-            "A Rickconvenient Mort",
-            "Rickdependence Spray",
-            "Amortycan Grickfitti",
-            "Rick & Morty's Thanksploitation Spectacular",
-            "Gotron Jerrysis Rickvangelion",
-            "Rickternal Friendshine of the Spotless Mort",
-            "Forgetting Sarick Mortshall",
-            "Rickmurai Jack"
+    first_data= {
+        "episode": [
+          "https://rickandmortyapi.com/api/episode/1",
+          "https://rickandmortyapi.com/api/episode/2",
+          "https://rickandmortyapi.com/api/episode/3",
+          "https://rickandmortyapi.com/api/episode/4",
+          "https://rickandmortyapi.com/api/episode/5",
+          "https://rickandmortyapi.com/api/episode/6",
+          "https://rickandmortyapi.com/api/episode/7",
+          "https://rickandmortyapi.com/api/episode/8",
+          "https://rickandmortyapi.com/api/episode/9",
+          "https://rickandmortyapi.com/api/episode/10",
+          "https://rickandmortyapi.com/api/episode/11",
+          "https://rickandmortyapi.com/api/episode/12",
+          "https://rickandmortyapi.com/api/episode/13",
+          "https://rickandmortyapi.com/api/episode/14",
+          "https://rickandmortyapi.com/api/episode/15",
+          "https://rickandmortyapi.com/api/episode/16",
+          "https://rickandmortyapi.com/api/episode/17",
+          "https://rickandmortyapi.com/api/episode/18",
+          "https://rickandmortyapi.com/api/episode/19",
+          "https://rickandmortyapi.com/api/episode/20",
+          "https://rickandmortyapi.com/api/episode/21",
+          "https://rickandmortyapi.com/api/episode/22",
+          "https://rickandmortyapi.com/api/episode/23",
+          "https://rickandmortyapi.com/api/episode/24",
+          "https://rickandmortyapi.com/api/episode/25",
+          "https://rickandmortyapi.com/api/episode/26",
+          "https://rickandmortyapi.com/api/episode/27",
+          "https://rickandmortyapi.com/api/episode/28",
+          "https://rickandmortyapi.com/api/episode/29",
+          "https://rickandmortyapi.com/api/episode/30",
+          "https://rickandmortyapi.com/api/episode/31",
+          "https://rickandmortyapi.com/api/episode/32",
+          "https://rickandmortyapi.com/api/episode/33",
+          "https://rickandmortyapi.com/api/episode/34",
+          "https://rickandmortyapi.com/api/episode/35",
+          "https://rickandmortyapi.com/api/episode/36",
+          "https://rickandmortyapi.com/api/episode/37",
+          "https://rickandmortyapi.com/api/episode/38",
+          "https://rickandmortyapi.com/api/episode/39",
+          "https://rickandmortyapi.com/api/episode/40",
+          "https://rickandmortyapi.com/api/episode/41",
+          "https://rickandmortyapi.com/api/episode/42",
+          "https://rickandmortyapi.com/api/episode/43",
+          "https://rickandmortyapi.com/api/episode/44",
+          "https://rickandmortyapi.com/api/episode/45",
+          "https://rickandmortyapi.com/api/episode/46",
+          "https://rickandmortyapi.com/api/episode/47",
+          "https://rickandmortyapi.com/api/episode/48",
+          "https://rickandmortyapi.com/api/episode/49",
+          "https://rickandmortyapi.com/api/episode/50",
+          "https://rickandmortyapi.com/api/episode/51"
         ],
         "id": 1,
         "location": "Citadel of Ricks",
-        "name": "Rick Sanchez"
-    }
-
-    last_data={
-        "episodes": [
-          "Rixty Minutes"
-        ],
-        "id": 20,
-        "location": "Interdimensional Cable",
-        "name": "Ants in my Eyes Johnson"
+        "name": "Rick Sanchez",
+        "numEpisode": 51
       }
 
+    last_data= {
+        "episode": [
+          "https://rickandmortyapi.com/api/episode/9"
+        ],
+        "id": 826,
+        "location": "Earth (Replacement Dimension)",
+        "name": "Butter Robot",
+        "numEpisode": 1
+      }
     #Test 1 Verificamos que funciona el servidor
     def test_allData(self):
-        resp=requests.get(self.URL_CHARACTER)
-        #Comprobamos que se conecta
-        self.assertEqual(resp.status_code, 200)
-        #Comprobamos que son 20 caracteres
-        self.assertEqual(len(resp.json(),20))
-        #Comprobamos que el primer dato obtenido es el correcto
-        self.assertDictEqual(resp.__dict__, self.first_data)
-        # Comprobamos que el ultimo dato obtenido es el correcto
-        self.assertDictEqual(resp.__dict__, self.last_data)
-        print("Test 1 completed")
+        resp = requests.get(self.URL_CHARACTER)
+        response_json = resp.json()
+        self.assertEqual(resp.status_code, 200, "Se conecta al servidor")
+        self.assertEqual(len(response_json), 826, "Hay 826 characters")
+        self.assertEqual(response_json[0], self.first_data, "El primero es Rick")
+        self.assertDictEqual(response_json[825], self.last_data, "El ultimo es Ants in my Eyes Johnson")
+        print('ok')
 
 
-    #Si no encuentro solución a buscar en todo el diccionario
-    def test_FirstData(self):
-        resp = requests.get(self.URL_CHARACTER + '/1')
-        # Comprobamos que el primer dato obtenido es el correcto
-        self.assertDictEqual(resp.__dict__, self.first_data)
 
-    def test_LastData(self):
-        resp = requests.get(self.URL_CHARACTER + '/20')
-        # Comprobamos que el ultimo dato obtenido es el correcto
-        self.assertDictEqual(resp.__dict__, self.last_data)
 
 
 #Ejecutamos los test
@@ -107,5 +97,3 @@ if __name__== "__main__":
 
     #Ejecutamos el primer test
     tester.test_allData()
-    tester.test_FirstData()
-    tester.test_LastData()
